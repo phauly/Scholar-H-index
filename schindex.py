@@ -51,7 +51,7 @@ names = [((e[0].encode('utf8','ignore'))+"+"+(e[1].encode('utf8','ignore'))).rep
 #print names
 
 #print "H-INDEXES and G-INDEXES"
-for name in names[1:]:
+for name in names[]:
 	(metadata,references,from_cache) = s.query('as_sauthors="%s"'%name)
         #print "\n".join([r.title for r in references])
 	#print "from cache ",from_cache
