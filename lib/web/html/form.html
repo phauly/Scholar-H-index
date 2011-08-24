@@ -1,0 +1,92 @@
+<!-- -*- coding: utf-8 -*- -->
+
+<script><!--
+
+function allSub() {
+  for (var i = 0; i < document.theform.as_subj.length; i++)
+    document.theform.as_subj[i].checked = false;
+  document.getElementById("subjectlist").style.display = "none" ;
+  return true ;
+}
+
+function someSub() {
+  document.getElementById("subjectlist").style.display = "block" ;
+  return true ;
+}
+
+function oneSub() {
+  var count = 0;
+  for (var i = 0; i < document.theform.as_subj.length; i++)
+    if (document.theform.as_subj[i].checked) count++;
+  if (count==0) {
+    document.theform.as_allsubj[0].checked = 1 ;
+    document.getElementById("subjectlist").style.display = "none" ;
+  } else {
+    document.theform.as_allsubj[1].checked = 1 ;
+    document.getElementById("subjectlist").style.display = "block" ;
+  }
+}
+
+function showHideDetails(status) {
+  var aq = document.getElementById("scholar-more-details") ;
+  aq.style.display = status ;
+}
+
+function toggleDetails() {
+  var aq = document.getElementById("scholar-more-details") ;
+  if (aq.style.display=="none")
+    aq.style.display = "block" ;
+  else
+    aq.style.display = "none" ;
+  return false ;
+}
+
+--></script>
+
+<form id="scholar" method="get" action="[--[ACTION]--]" name="theform">
+
+<input name="btnG" value="Search Scholar" type="submit"> (<a id="scholar-more-details-toggle" href="#" onclick="return toggleDetails()">toggle details</a>)
+
+<div id="scholar-details">
+
+<p> for publications written by <input class="light" size="50" type="text" maxlength="60" value=[-[as_sauthors]-] name="as_sauthors"></p>
+
+<div id="scholar-more-details">
+
+<p>in <input name="as_allsubj" value="all" onclick="return allSub()" type="radio">all or <input name="as_allsubj" value="some" type="radio" onclick="return someSub()">some subject areas</p>
+
+<table id="subjectlist"><tr><td>
+<input name="as_subj" value="bio" onclick="return oneSub()" [-[as_subj-bio]-] type="checkbox">Biology, Life Sciences, and Environmental Science<br>
+<input name="as_subj" value="bus" onclick="return oneSub()" [-[as_subj-bus]-] type="checkbox">Business, Administration, Finance, and Economics<br>
+<input name="as_subj" value="chm" onclick="return oneSub()" [-[as_subj-chm]-] type="checkbox">Chemistry and Materials Science<br>
+<input name="as_subj" value="eng" onclick="return oneSub()" [-[as_subj-eng]-] type="checkbox">Engineering, Computer Science, and Mathematics<br>
+</td><td>
+<input name="as_subj" value="med" onclick="return oneSub()" [-[as_subj-med]-] type="checkbox">Medicine, Pharmacology, and Veterinary Science<br>
+<input name="as_subj" value="phy" onclick="return oneSub()" [-[as_subj-phy]-] type="checkbox">Physics, Astronomy, and Planetary Science<br>
+<input name="as_subj" value="soc" onclick="return oneSub()" [-[as_subj-soc]-] type="checkbox">Social Sciences, Arts, and Humanities
+</td></tr></table>
+
+<p><label>with all the words</label> <input class="light" size="45" value=[-[as_q]-] name="as_q" type="text"></p>
+
+<p><label>with at least one of the words</label> <input class="light" size="45" value=[-[as_oq]-] name="as_oq" type="text"></p>
+
+<p><label>without the words</label> <input class="light" size="45" value=[-[as_eq]-] name="as_eq" type="text"></p>
+
+<p><label>published in</label> <input class="light" size="45" value=[-[as_publication]-] name="as_publication" type="text"></p>
+
+<p>between <input class="light" size="4" value=[-[as_ylo]-] name="as_ylo" type="text"> and <input class="light" size="4" value=[-[as_yhi]-] name="as_yhi" type="text"></p>
+
+<p>and display those cited at least <input class="light" size="2" value=[-[x_minr]-] name="x_minr" type="text"> times</p>
+
+<!-- where my words occur: anywhere in the article -->
+<input name="as_occt" value="any" type="hidden">
+
+<input name="hl" value="en" type="hidden">
+<input name="lr" value="" type="hidden">
+
+</div> <!-- more details -->
+</div> <!-- details -->
+
+</form>
+
+<script>oneSub()</script>

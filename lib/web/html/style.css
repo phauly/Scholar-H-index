@@ -1,0 +1,202 @@
+/* -*- coding: utf-8 -*- */
+
+body {
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px; 
+    margin: 20px;
+    padding: 0px;
+}
+
+h1 {
+    color: #AAA;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+h2 {
+    font-size: 11px;
+    font-weight: bold;
+    margin: 5px 0px 15px 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 5px 0px 5px 0px;
+    padding: 0px;
+}
+
+p.menu {
+    font-size: 9px;
+    text-align: right;
+}
+
+p.footer {
+    font-size: 9px; 
+    margin-top: 10px;
+    text-align: center;
+}
+
+table {
+    font-size: 11px;
+}
+
+table.title {
+    margin-left: auto;
+    margin-right: auto;
+}
+table.title tr {
+    vertical-align: top;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Form                                                                          */
+
+#scholar {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 9px;
+    padding: 8px;
+    border: solid #C0C0C0 1px;
+    background: #EEE;
+}
+
+#scholar-details {
+    border-style: solid;
+    border-color: #AAA;
+    border-width: 0 0 0 1px;
+    padding: 0 0 0 5px;
+    margin: 0 0 0 20px;
+}
+
+#scholar-more-details-toggle {
+    font-size: 8px;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#scholar-more-details {
+    padding: 0px;
+    margin: 0px;
+}
+
+#scholar table {
+    font-size: 8px;
+    padding: 0;
+    margin: 0 0 0 15px;
+}
+
+#scholar table td {
+    vertical-align: top;
+}
+
+#scholar label {
+    width:150px; 
+    clear: right; 
+    float: left;
+}
+
+#scholar input.light {
+    font-size: 9px;
+    padding: 1px;
+    margin: 0;
+    border: solid #C0C0C0 1px;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Status, about box                                                                       */
+
+div.status {
+    margin: 4px 20% 4px 20%;
+    font-size: 10px;
+    text-align: center;
+}
+
+table.about {
+    font-size: 11px;
+    padding: 10px 0 0px 0;
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Results                                                                       */
+
+table.statistics {
+    font-size: 10px;
+    border: solid #AAA 1px;
+    margin: 4px 0 4px 0;
+    padding: 7px;
+    width: 100%;
+}
+
+table.statistics td {
+    vertical-align: top;
+}
+
+table.references {
+    font-size: 10px;
+    border: solid #AAA 1px;
+    margin: 4px 0 4px 0;
+    width: 100%;
+}
+
+table.references td {
+    padding: 2px 4px 2px 4px;
+}
+
+table.references tr td.hlim {
+    background: #CCCCFF;
+}
+
+table.references tr td.hinf {
+    background: #DDD;
+}
+
+table.references tr td.notcited {
+    background: #FFCCCC;
+}
+
+div.reference-details {
+    color: #888888;
+    font-size: 9px;
+}
+
+div.hbar {
+    border: solid #555555 1px;
+    background: #BBBBBB;
+    margin: 0px;
+    padding: 0px;
+    height: 10px
+}
+
+/* ----------------------------------------------------------------------------- */
+/* Cache                                                                         */ 
+
+table.cache {
+    font-size: 9px;
+    margin: 0 0 0 10px;
+    padding: 0px;
+}
+
+table.cache tr {
+    margin: 0;
+    padding: 0;
+}
+
+table.cache tr.valid {
+    color: red;
+}
+
+table.cache tr.filler {
+    color: black;
+    text-align: middle;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+table.cache td {
+    padding: 3px;
+    text-align: right;
+}
